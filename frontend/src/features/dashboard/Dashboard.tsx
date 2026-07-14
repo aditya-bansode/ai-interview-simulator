@@ -15,7 +15,7 @@ import {
   AlertCircle,
   Briefcase,
   GraduationCap,
-  FolderCode,
+  FolderCog,
   ListTodo
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -53,7 +53,7 @@ export const Dashboard: React.FC = () => {
   const [education, setEducation] = useState<string[]>([]);
   const [experience, setExperience] = useState<string[]>([]);
   const [technologies, setTechnologies] = useState<string[]>([]);
-  const [certifications, setCertifications] = useState<string[]>([]);
+  const [, setCertifications] = useState<string[]>([]);
   
   const [activeTab, setActiveTab] = useState<'tech' | 'exp' | 'proj' | 'edu'>('tech');
 
@@ -365,7 +365,7 @@ export const Dashboard: React.FC = () => {
                       {projects.length > 0 ? (
                         projects.map((p, i) => (
                           <li key={i} className="flex gap-2 items-start border-l border-accent-secondary/30 pl-2">
-                            <FolderCode size={10} className="text-accent-secondary flex-shrink-0 mt-0.5" />
+                            <FolderCog size={10} className="text-accent-secondary flex-shrink-0 mt-0.5" />
                             <span>{p}</span>
                           </li>
                         ))

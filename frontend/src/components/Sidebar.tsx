@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { 
   LayoutDashboard, 
-  MessageSquareCode, 
+  MessageSquare, 
   BarChart3,
   ShieldAlert,
   User, 
@@ -25,7 +25,7 @@ export const Sidebar: React.FC = () => {
 
   const menuItems = [
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
-    { name: 'AI Interview', path: '/chat', icon: MessageSquareCode },
+    { name: 'AI Interview', path: '/chat', icon: MessageSquare },
     { name: 'Analytics', path: '/analytics', icon: BarChart3 },
     ...(user?.is_admin ? [{ name: 'Admin Console', path: '/admin', icon: ShieldAlert }] : []),
     { name: 'Profile', path: '/profile', icon: User },

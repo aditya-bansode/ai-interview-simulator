@@ -219,7 +219,7 @@ export const Analytics: React.FC = () => {
 
           <div className="h-64 w-full text-[10px] flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%">
-              <RadarChart cx="50%" cy="50%" r="80%" data={skillData}>
+              <RadarChart cx="50%" cy="50%" outerRadius="80%" data={skillData}>
                 <PolarGrid stroke="#374151" />
                 <PolarAngleAxis dataKey="subject" stroke="#9CA3AF" />
                 <PolarRadiusAxis angle={30} domain={[0, 100]} stroke="#4B5563" />

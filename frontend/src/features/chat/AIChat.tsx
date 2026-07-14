@@ -133,13 +133,14 @@ export const AIChat: React.FC = () => {
 
   // Dismiss difficulty alerts
   useEffect(() => {
-    if (difficultyAlert) {
-      const timer = setTimeout(() => {
+    if (!difficultyAlert) return;
+
+    const timer = setTimeout(() => {
         setDifficultyAlert(null);
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [difficultyAlert]);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+}, [difficultyAlert]);
 
   // Start webcam feed for CV proctoring
   const startWebcam = async () => {

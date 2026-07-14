@@ -1,4 +1,9 @@
-import axios from 'axios';
+import axios, { InternalAxiosRequestConfig } from 'axios';
+
+// Extend axios config to support retry flag
+interface RetryableAxiosRequestConfig extends InternalAxiosRequestConfig {
+  _retry?: boolean;
+}
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
 
@@ -43,7 +48,7 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
-    const originalRequest = error.config;
+    const originalRequest = error.config as RetryableAxiosRequestConfig;
     
     // Avoid infinte loops and don't refresh on login/register endpoints
     if (

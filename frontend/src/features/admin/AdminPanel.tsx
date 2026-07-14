@@ -11,7 +11,6 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import api from '../../services/api';
 
 interface AdminUser {

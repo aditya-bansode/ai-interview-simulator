@@ -10,7 +10,6 @@ import {
   Bot,
   AlertCircle,
   RotateCcw,
-  Sliders,
   Briefcase,
   Play,
   CheckCircle,
@@ -1208,7 +1207,7 @@ export const AIChat: React.FC = () => {
                 <div>
                   <p className="truncate max-w-[140px]">{q.category}</p>
                   {idx === currentQuestionIdx && isFollowUpActive && (
-                    <span className="text-[8px] text-accent-secondary bg-accent-secondary/10 px-1 py-0.5 rounded font-bold mt-1 inline-block flex items-center gap-0.5">
+                    <span className="text-[8px] text-accent-secondary bg-accent-secondary/10 px-1 py-0.5 rounded font-bold mt-1 flex items-center gap-0.5 w-fit">
                       <ArrowRight size={8} />
                       <span>Follow-up</span>
                     </span>
@@ -1238,6 +1237,12 @@ export const AIChat: React.FC = () => {
                 <span className="text-text-secondary">Face Presence Rate</span>
                 <span className="font-bold text-text-primary">
                   {Math.round((statsFaceDetected / statsTotalFrames) * 100)}%
+                </span>
+              </div>
+              <div className="flex justify-between py-1 border-b border-border-main/40">
+                <span className="text-text-secondary">Looking Away Rate</span>
+                <span className="font-bold text-accent-warning">
+                  {Math.round((statsLookingAway / statsTotalFrames) * 100)}%
                 </span>
               </div>
               <div className="flex justify-between py-1 border-b border-border-main/40">

@@ -5,7 +5,6 @@ import {
   Clock, 
   Activity, 
   UploadCloud, 
-  CheckCircle2, 
   Calendar,
   TrendingUp,
   BrainCircuit,
@@ -14,14 +13,12 @@ import {
   ChevronRight,
   ArrowUpRight,
   AlertCircle,
-  Code2,
   Briefcase,
   GraduationCap,
   FolderCode,
-  ShieldCheck,
   ListTodo
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   ResponsiveContainer, 
   AreaChart, 

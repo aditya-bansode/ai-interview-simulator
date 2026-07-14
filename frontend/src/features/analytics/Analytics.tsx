@@ -7,8 +7,6 @@ import {
   CartesianGrid, 
   Tooltip, 
   ResponsiveContainer, 
-  BarChart, 
-  Bar, 
   Legend, 
   RadarChart, 
   PolarGrid, 
@@ -21,9 +19,7 @@ import {
   Award, 
   CheckCircle, 
   AlertTriangle, 
-  Cpu, 
-  Eye, 
-  Layers 
+  Cpu 
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 

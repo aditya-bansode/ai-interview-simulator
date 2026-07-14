@@ -5,8 +5,6 @@ import {
   Volume2, 
   Settings as SettingsIcon, 
   CheckCircle,
-  HelpCircle,
-  Cpu,
   Brain
 } from 'lucide-react';
 import { motion } from 'framer-motion';

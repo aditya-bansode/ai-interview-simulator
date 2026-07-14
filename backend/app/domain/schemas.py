@@ -3,6 +3,7 @@ from uuid import UUID
 from datetime import datetime
 from typing import Optional
 
+
 class UserBase(BaseModel):
     email: EmailStr
     full_name: Optional[str] = Field(default=None, max_length=255)
@@ -136,7 +137,7 @@ class ReportGenerateRequest(BaseModel):
     qa_history: list[ReportQAItem]
 
 class AdminUserResponse(BaseModel):
-    id: uuid.UUID
+    id: UUID
     email: str
     full_name: Optional[str]
     is_active: bool

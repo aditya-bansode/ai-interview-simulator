@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-main: #0B0F19;
+  --color-bg-sec: #111827;
+  --color-bg-card: #1F2937;
+  --color-accent-primary: #3B82F6;
+  --color-accent-success: #22C55E;
+  --color-accent-warning: #F59E0B;
+  --color-accent-error: #EF4444;
+  
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+  --color-border-main: #374151;
+
+  --animate-wave: wave 1.2s ease-in-out infinite;
+
+  @keyframes wave {
+    0%, 100% { height: 8px; }
+    50% { height: 28px; }
+  }
+}
+
+/* Custom Scrollbar Styles for premium dark layout */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Root Settings */
+html, body {
+  background-color: #0B0F19;
+  color: #F9FAFB;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Global loading skeleton helper */
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.skeleton {
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+}
